@@ -600,6 +600,12 @@ input, select, textarea {
 
 /* Icon */
 
+	.logo > span {
+		font-size: 2.5em;
+		position: relative;
+		top: 0.25em;
+	}
+
 	.icon {
 		text-decoration: none;
 		border-bottom: none;
