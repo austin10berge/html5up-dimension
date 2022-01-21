@@ -641,6 +641,18 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+/* Learner */
+	.portrait {
+		max-width: 50%;
+		max-height: 25%;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	.portrait > img {
+		border-radius: 100% !important;
+	}
+
 /* Image */
 
 	.image {
