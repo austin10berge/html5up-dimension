@@ -641,16 +641,32 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
-/* Learner */
-	.portrait {
-		max-width: 50%;
-		max-height: 25%;
+/* Developer */
+.skills {
+	list-style: none;
+}
+
+.skills > a {
+	font-size: 1.5em;
+}
+
+
+
+/* Learner Photo */
+
+	#about > .portrait {
+		max-width: 45%;
+		max-height: 15%;
 		margin-left: auto !important;
 		margin-right: auto !important;
 	}
 
 	.portrait > img {
-		border-radius: 100% !important;
+		border-radius: 50% !important;
+	}
+
+	#about > .image:before {
+		border-radius: 50%; 
 	}
 
 /* Image */
