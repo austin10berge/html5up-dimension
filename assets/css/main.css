@@ -650,6 +650,14 @@ input, select, textarea {
 	font-size: 1.5em;
 }
 
+li > i {
+	padding: 0 .4em;
+	font-size: 1.2em;
+}
+
+i > img {
+	max-width: .9em;
+}
 
 
 /* Learner Photo */
@@ -730,7 +738,7 @@ input, select, textarea {
 
 		.image.main {
 			display: block;
-			margin: 2.5rem 0;
+			margin: 2rem 0;
 			width: 100%;
 		}
 
