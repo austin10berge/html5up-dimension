@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" type="image/svg" href="./images/tenge.svg"/>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -30,9 +31,9 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#intro">Developer</a></li>
-								<li><a href="#work">Musician</a></li>
-								<li><a href="#about">Learner</a></li>
+								<li><a href="#dev">Developer</a></li>
+								<li><a href="#musician">Musician</a></li>
+								<li><a href="#technician">Technician</a></li>
 								<li><a href="#contact">Contact</a></li>
 								<!-- <li><a href="#elements">Elements</a></li> -->
 							</ul>
@@ -43,7 +44,7 @@
 					<div id="main">
 
 						<!-- Developer (Intro) -->
-							<article id="intro">
+							<article id="dev">
 								<h2 class="major">Developer</h2>
 								<span class="image main"><img src="images/developer.jpg" alt="" /></span>
 								<p>&emsp;&emsp;&emsp;My programming journey began with learning C++ at Biola University. I have since managed a website while creating custom
@@ -60,7 +61,7 @@
 							</article>
 
 						<!-- Musician (Work) -->
-							<article id="work">
+							<article id="musician">
 								<h2 class="major">Musician</h2>
 								<span class="image main"><img src="images/hume.jpeg" alt="" /></span>
 								<h3>Guitar | Keys | Music Director</h3>
@@ -71,8 +72,8 @@
 							</article>
 
 						<!-- Learner (About)  -->
-							<article id="about">
-								<h2 class="major">Learner</h2>
+							<article id="technician">
+								<h2 class="major">Technician</h2>
 								<span class="image main portrait"><img src="images/portrait.jpg" alt="" /></span>
 								<p>&emsp;&emsp;&emsp;While working at a Managed Service Provider (MSP) for two years, I've found that I am a kinetic learner. 
 									I have become comfortable diving into new tasks and figuring it out on the job. A few notable projects include
@@ -83,24 +84,28 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
+								<!-- <form>  CHANGE BELOW ACTION TO AUSTIN10BERGE.COM:8000/SEND-->
+								<!-- <form id="contact-form" action="localhost:8000/send" method="post" enctype="multipart/form-data"> -->
+								<form id="contact-form" action="" method="" enctype="">
+
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<input type="text" name="name" id="name" required/>
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<input type="text" name="email" id="email" required/>
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
+											<textarea name="message" id="message" rows="4" required></textarea>
 										</div>
 									</div>
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" class="primary" /></li>
 										<li><input type="reset" value="Reset" /></li>
+										<li class="confirmation">Message sent!</li>
 									</ul>
 								</form>
 								<ul class="icons"> 

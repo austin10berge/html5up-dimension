@@ -302,6 +302,15 @@ input, select, textarea {
 
 /* Form */
 
+	.confirmation {
+		display: none;
+		transition: background-color .5s;
+		margin: auto;
+		padding: 0.5em 1.1em !important;
+		background-color: #a3a3a311;
+		border-radius: 0.25em;
+	}
+
 	form {
 		margin: 0 0 2rem 0;
 	}
@@ -662,7 +671,7 @@ i > img {
 
 /* Learner Photo */
 
-	#about > .portrait {
+	#technician > .portrait {
 		max-width: 45%;
 		max-height: 15%;
 		margin-left: auto !important;
@@ -673,7 +682,7 @@ i > img {
 		border-radius: 50% !important;
 	}
 
-	#about > .image:before {
+	#technician > .image:before {
 		border-radius: 50%; 
 	}
 
