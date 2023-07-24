@@ -5,6 +5,8 @@ const cors = require("cors");
 require('dotenv').config({path:'../../.env'});
 var path = require("path");
 
+// header("Access-Control-Allow-Origin: *"); Maybe this will fix Same Origin Policy error?
+
 // Instantiate the express app
 const app = express();
 app.use(cors());
@@ -14,10 +16,13 @@ app.route("/").get(function (req, res) {
     res.sendFile('index.html', { root: path.resolve(__dirname, '../../') });
 });
 
-// Port will be 5000 for testing
-const PORT = process.env.PORT; //|| 5500;
-app.listen(PORT, ("127.0.0.1"), () => {
-    console.log(`Listening on port ${PORT}...`);
+// Assign port
+const HOSTNAME = "https://austin10berge.com";
+const PORT = process.env.PORT || 8393;
+
+// Deleted hostname after port below
+app.listen(PORT, "austin10berge.com", () => {  // Location to listen
+    console.log(`Server running at ${HOSTNAME}:${PORT}/`);
     console.log(process.env.EMAIL);
     console.log(process.env.PASS);
 });
@@ -41,8 +46,8 @@ Transporter.verify(function (error, success) {
     }
 });
 
-app.post("/send", (req, res) => {
-    // 1. 
+app.post("/contact-send", (req, res) => { // Path to listen
+    // 1. Parse input and create message
     let form = new multiparty.Form();
     let data = {};
     console.log("working");
@@ -52,7 +57,7 @@ app.post("/send", (req, res) => {
             data[property] = fields[property].toString();
         });
 
-        // 2.
+        // 2. Message to send
         const mail = {
             from: data.name,
             to: process.env.RECIPIENT,
@@ -60,7 +65,7 @@ app.post("/send", (req, res) => {
             text: `You received a new message on your site! Noice!\n\n${data.name} <${data.email}> \n"${data.message}"`,
         };
 
-        // 3.
+        // 3. Send message
         Transporter.sendMail(mail, (err, data) => {
             if (err) {
                 console.log(err);

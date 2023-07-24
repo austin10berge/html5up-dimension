@@ -669,9 +669,9 @@ i > img {
 }
 
 
-/* Learner Photo */
+/* Learner/Experience Photo */
 
-	#technician > .portrait {
+	#experience > .portrait {
 		max-width: 45%;
 		max-height: 15%;
 		margin-left: auto !important;
@@ -682,7 +682,7 @@ i > img {
 		border-radius: 50% !important;
 	}
 
-	#technician > .image:before {
+	#experience > .image:before {
 		border-radius: 50%; 
 	}
 

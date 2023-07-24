@@ -385,37 +385,11 @@
 
 			}
 
-		// Contact process
-		// var contactFields = {};
-
-		// class User {
-		// 	constructor(name, email, message) {
-		// 	this.name = name;
-		// 	this.email = email;
-		// 	this.message = message;
-		// 	}
-		// }
-
-		// document.addEventListener("DOMContentLoaded", function() {
-		// 	contactFields.name = document.getElementById('name');
-		// 	contactFields.email = document.getElementById('email');
-		// 	contactFields.message = document.getElementById('message');
-		// });
-
-		// document.addEventListener(".primary", function() {
-		// 	let usr = new User(name.value, email.value, message.value);
-		// 	console.log(usr.email + usr.name + usr.message);
-		// });
-
 		const form = document.getElementById("contact-form");
-		// let actionArea = document.getElementsByClassName("actions")[0];
-		// let confirmation = document.createElement("li");
-		// confirmation.innerHTML = "Message sent!";
-		// confirmation.className = "confirmation";
 
 		const sendMail = (mail) => {
 			console.log("Running sendMail()");
-			fetch("http://localhost:8000/send", { // CHANGE TO AUSTIN10BERGE.COM:8000/SEND
+			fetch("https://austin10berge.com:8000/contact-send", { // Fetch URL to email server
 				method: "post",
 				body: mail,
 
@@ -431,16 +405,12 @@
 			});
 		};
 
+		// Listener for contact email
 		const formEvent = form.addEventListener("submit", (event) => {
 			event.preventDefault(); 
 			let mail = new FormData(form);
 			sendMail(mail);
-
-			// console.log("confirmation");
-			// actionArea.appendChild(confirmation);
 		});
-
-		
 
 		// Initialize.
 
